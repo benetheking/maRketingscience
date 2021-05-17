@@ -1,0 +1,2 @@
+# maRketingscience
+marsci package
