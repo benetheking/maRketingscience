@@ -7,12 +7,12 @@
 #' Function will be updated in the near future.
 #' @keywords log transform
 #' @export
-#' @examples logger(mtcars)
+#' @examples lagger(mtcars)
 #' logger()
-## MAKE LOGS
-logger <- function(x) {
+## MAKE LAGS
+lagger <- function (x, lag = 1) {
   y <- x %>%
-    map_df(., ~log(.x+1))
-  names(y) <- paste0("log_", names(x))
+    map_df(., ~dplyr::lag(.x, lag, default = 0))
+  names(y) <- paste0("lag", as.character(lag), "_", names(x))
   return(y)
 }

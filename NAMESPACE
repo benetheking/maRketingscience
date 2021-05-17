@@ -2,6 +2,7 @@
 
 export(.remove_shit)
 export(korrelierer)
+export(lagger)
 export(logger)
 export(model_painter)
 export(plot_model_media)

@@ -4,16 +4,16 @@
 \alias{r_squared}
 \title{Return actual R² for any model type, e.g. classic LMs as well as GAMs or Boosted Tree models.}
 \usage{
-r_squared(modell = model1)
+r_squared(model = model1)
 }
 \arguments{
-\item{modell}{Input data. Just name the model you want to have the R² calculated for. Defaults to maRketingscience's "model1".}
+\item{model}{Input data. Just name the model you want to have the R² calculated for. Defaults to maRketingscience's "model1".}
 }
 \description{
 This function returns a calculation of the R² of your model based on the squared correlation between actual and predicted values. This is much more stable than the classic lm() function of S and R, which fails already when you delete the intercept.
 }
 \examples{
-r_squared(modell)
+r_squared(model)
 r_squared()
 }
 \keyword{MMM}
