@@ -4,16 +4,18 @@
 \alias{set_dummy}
 \title{A function for rapid creation of an outlier catch dummy variable}
 \usage{
-set_dummy(modell)
+set_dummy(model = model1, sd = 1)
 }
 \arguments{
-\item{modell}{Input data. Just name the model you want to create a dummy for}
+\item{model}{Input data. It's just name the model that you want the dummy for.}
+
+\item{sd}{Controls the cut-off value for the dummy variable that is being generated. Can be a non-integer like 1.5. Defaults to 1.}
 }
 \description{
 This function allows you to quickly create a dummy variable for controlling outliers
 }
 \examples{
-set_dummy(my_default_model) ## use the object assignment operator ' <- ' to include the dummy into your dataset
+set_dummy(model1) ## use the object assignment operator ' <- ' to include the dummy into your dataset
 set_dummy()
 }
 \keyword{create}
