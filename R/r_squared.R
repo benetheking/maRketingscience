@@ -4,16 +4,18 @@
 #' @param model Input data. Just name the model you want to have the R² calculated for. Defaults to maRketingscience's "model1".
 #' @keywords display R² of your MMM model
 #' @export
-#' @examples r_squared(model)
-#' r_squared()
-
-
-r_squared <- function(model = model1) {
-
+#' @examples model_stats(model)
+#' model_stats()
+model_stats <- function(model = model1) {
+  ## compute R2
   eins <- predict(model)
   zwei <- model$model[,1]
-
   korri <- cor(eins, zwei)^2
 
-  print(paste0("R2 = ", round(korri*100, 1), "%"))
+  ## compute DW test statistic
+  dw_stat <- car::durbinWatsonTest(model) %>%
+    `[[`(2)
+  print(paste0("model.R2 is: ", round(korri*100, 1), "%", " --- ",
+               "DW test statistic is: ", round(dw_stat, 2)))
+
 }

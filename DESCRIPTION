@@ -1,6 +1,6 @@
 Package: maRketingscience
-Title: some functions to help make MMM less complicated
-Version: 0.1.0.3000
+Title: functions for an integrated linear MMM workflow
+Version: 0.2.0
 Authors@R: 
     person(given = "Benedikt",
            family = "Kreutzer",
@@ -12,6 +12,8 @@ Imports:
 	dplyr, 
 	ggplot2, 
 	magrittr,
+	broom,
+        car,
 	stringr, 
 	lubridate, 
 	hexView, 

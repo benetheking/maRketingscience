@@ -13,9 +13,9 @@ adbankr <- function(data_vec) {
   adbanks <- c(5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90)
 
   ## define results matrix to be filled:
-  step1 <- matrix(0, nrow = length(tv_grp), ncol=length(adbanks))
+  step1 <- matrix(0, nrow = length(data_vec), ncol=length(adbanks))
   step2 <- as.data.frame(step1)
-  resu <- cbind(tv_grp, step2)
+  resu <- cbind(data_vec, step2)
   names(resu)[2:length(names(resu))] <- paste0(names(resu)[1], adbanks)
 
   ## fill the first line:
@@ -34,7 +34,7 @@ adbankr <- function(data_vec) {
 adbankr_df <- function(data) {
   ## just calls the adbank function on a DF.
   new <- data %>%
-    map(., ~adbankr(.x))
+    map_df(., ~adbankr(.x))
 
   return(new)
 }
