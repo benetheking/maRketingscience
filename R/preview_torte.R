@@ -9,16 +9,6 @@
 #' @export
 #' @examples preview_torte(my_default_model)
 #' preview_torte()
-
-
-.remove_shit <- function(input) {
-  i2 <- input %>%
-    str_remove_all(., "log_|05|10|20|30|40|50|60|70|80|90")
-
-  return(i2)
-}
-
-
 preview_torte <- function(modell, coler = "def", rad = 1.01, font_size = 0.9) {
   ## importiere und previewe Modell
   blubb <- preview(modell)
