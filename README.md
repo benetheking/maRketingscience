@@ -13,3 +13,4 @@ The main goal of maRketingscience is offering reliable functions to make composi
 ### look out for these improvements in the future:
 - introduction of "tsibble"s for the entire modelling workflow
 - new tidy modelling approach using "broom" to come
+- simulate_models() function(s) to find variable combinations by brute force - currently simulating more than 5000 marketing models per minute...
