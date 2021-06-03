@@ -1,6 +1,6 @@
 Package: maRketingscience
 Title: functions for an integrated linear MMM workflow
-Version: 0.2.0
+Version: 0.2.2
 Authors@R: 
     person(given = "Benedikt",
            family = "Kreutzer",
@@ -9,15 +9,16 @@ Authors@R:
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: a collection of helper functions for your typical linear model MMM workflow 
 Imports: 
-	dplyr, 
-	ggplot2, 
+	lubridate,
 	magrittr,
+	ggplot2,
+	stringr,
+	hexView,
+	tsibble,
+	dplyr,
 	broom,
-        car,
-	stringr, 
-	lubridate, 
-	hexView, 
-	tsibble
+	rlist,
+	car
 License: free to dl, use, modify and distribute for anyone
 Encoding: UTF-8
 LazyData: true
