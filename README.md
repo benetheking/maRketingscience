@@ -7,7 +7,7 @@ The main goal of maRketingscience is offering reliable functions to make composi
 ### Updates in v0.2:
 - the model_stats() function has replaced the depcrated r_squared and now shows the model's Durbin-Watson test statistic as well 
 - the mdl() wrapper function can be used instead of lm() for the modelling task. It saves the model output, shows the model object summary and plots actuals vs. predicted
-- the adbankr() and adbankr_df() functions are available for computing carry-over effects
+- the adbanker() function is available for computing carry-over effects on a media data-frame (was fused from the adbankr() and adbankr_df() functions in v0.2.2)
 - the holdout() function will compute a holdout test and show the respective R2s
 
 ### look out for these improvements in the future:
