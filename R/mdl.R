@@ -14,10 +14,20 @@ mdl <- function(..., data=full_data) {
   mdl_obj <- lm(..., data=full_data)
 
   ## get summary and print object
-  summ <- summary(mdl_obj)
+  summ <- tidy(mdl_obj) %>%
+    mutate(sig. = case_when(abs(p.value) <= 0.001 ~ "***",
+                            abs(p.value) <= 0.01  ~ "**",
+                            abs(p.value) <= 0.05  ~ "*",
+                            abs(p.value) <= 0.1   ~ ".",
+                            TRUE ~ "-"))
+  summ2 <- model_stats(mdl_obj)
 
   ## return plot, summary and the model object for downstream use
   maRketingscience::model_painter(mdl_obj)
   print(summ)
+  print(summ2)
   return(mdl_obj)
 }
+
+
+mdl

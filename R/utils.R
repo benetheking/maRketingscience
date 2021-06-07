@@ -6,12 +6,16 @@
 #' @examples
 #' write_quick_sd()
 
-## remove adbanks and log
+## remove adbanks and log - this function should only be called on a set of adbanked variables!
 remove_clutter <- function(input) {
   i2 <- input %>%
     str_remove_all(., "log_|lag_|05|10|15|20|30|40|50|60|70|80|90")
   return(i2)
 }
+## exemplary data
+example_data <- data.frame(av = c(500, 512, 499, 530, 545, 513, 525),
+                           tv_grp = c(100, 100, 0, 0, 0, 0, 0),
+                           radio_grp = c(0, 0, 0, 50, 70, 0, 0))
 
 #### Adbanking helpers start here
 ## define default adbanks for function calls
