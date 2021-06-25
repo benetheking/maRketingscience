@@ -1,6 +1,6 @@
 Package: maRketingscience
 Title: functions for an integrated linear MMM workflow
-Version: 0.2.2
+Version: 0.2.5
 Authors@R: 
     person(given = "Benedikt",
            family = "Kreutzer",

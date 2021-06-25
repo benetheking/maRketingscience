@@ -2,6 +2,7 @@
 
 export(adbanker)
 export(alternate_decomp)
+export(finetune)
 export(holdout)
 export(korrelierer)
 export(lagger)
