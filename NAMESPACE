@@ -3,6 +3,8 @@
 export(adbanker)
 export(alternate_decomp)
 export(finetune)
+export(get_decomp)
+export(gtally)
 export(holdout)
 export(korrelierer)
 export(lagger)

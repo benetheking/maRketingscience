@@ -11,7 +11,7 @@
 ## WRAPPER FUNCTION for MMM
 mdl <- function(..., data=full_data) {
   ## just calls the adbank function on a DF.
-  mdl_obj <- lm(..., data=full_data)
+  mdl_obj <- lm(..., data=data)
 
   ## get summary and print object
   summ <- tidy(mdl_obj) %>%

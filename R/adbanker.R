@@ -13,16 +13,8 @@ adbanker <- function(data, adbank_values = adbanks_default) {
   result <- data %>%
     map2(.x = ., .y = names(.),
          ~adbank_base(data_vec = .x, var_name = .y)) %>%
-    rlist::list.cbind(.)
+    bind_cols(.)
 
-  ## correct odd names from the cbind
-  namis <- result %>%
-    names() %>%
-    map(., ~str_split(., pattern = "[:punct:]")) %>%
-    map(., ~.x[[1]][2]) %>%
-    unlist(.)
-
-  names(result) <- namis
   return(result)
 }
 
